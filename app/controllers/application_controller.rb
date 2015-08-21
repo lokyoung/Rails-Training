@@ -5,6 +5,6 @@ class ApplicationController < ActionController::Base
 
   def hello
     # 渲染hello world文本
-    render test: "hello world!"
+    render text: "hello world!"
   end
 end
