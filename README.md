@@ -22,7 +22,7 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
-
+项目heroku地址 https://bzapp01.herokuapp.com
 
 Please feel free to use a different markup language if you do not plan to run
 <tt>rake doc:app</tt>.
