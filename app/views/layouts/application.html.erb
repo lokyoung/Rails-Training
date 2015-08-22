@@ -6,22 +6,12 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
   </head>
-  <!--[if lt IE 9]> <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/r29/html5.min.js"> </script> <![endif]-->
+  <%= render 'layouts/shim' %>
   <body>
-    <header class="navbar navbar-fixed-top navbar-inverse">
-      <div class="container">
-        <%= link_to "百助社区", '#', id: "logo" %>
-        <nav>
-          <ul class="nav navbar-nav pull-right">
-            <li><%= link_to "首页",   '#' %></li>
-            <li><%= link_to "帮助",   '#' %></li>
-            <li><%= link_to "登录", '#' %></li>
-          </ul>
-        </nav>
-      </div>
-    </header>
+    <%= render 'layouts/header' %>
     <div class="container">
       <%= yield %>
+      <%= render 'layouts/footer' %>
     </div>
   </body>
 </html>
