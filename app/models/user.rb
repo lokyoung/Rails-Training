@@ -7,4 +7,5 @@ class User < ActiveRecord::Base
                     uniqueness: true
   # has_secure_password方法要求对应模型中有名为password_digest的属性
   has_secure_password
+  validates :password, length: { minimum: 6 }
 end
