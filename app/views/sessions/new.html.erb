@@ -1,0 +1,15 @@
+<% provide(:title, "登录") %>
+<h1>登录</h1>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <!--form_for(相应资源， url)-->
+    <%= form_for(:session, url: login_path) do |f| %>
+    <%= f.label :email %>
+    <%= f.text_field :email %>
+    <%= f.label :password %>
+    <%= f.password_field :password %>
+    <%= f.submit "Log in", class: "btn btn-primary" %>
+    <% end %>
+    <p>新用户？<%= link_to "现在注册！", signup_path %></p>
+  </div>
+</div>

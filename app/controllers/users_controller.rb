@@ -13,6 +13,7 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_param)
     if @user.save
+      log_in @user
       flash[:success] = "欢迎来到百助社区!"
       # 这里 @user 等同于 user_url(@user)
       redirect_to @user
