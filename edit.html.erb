@@ -1,0 +1,18 @@
+<% provdie(:title, '修改资料') %>
+
+<h1>修改用户资料</h1>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for(@user)  do |f| %>
+      <%= render "shared/error_message" %>
+      <%= f.label :name %>
+      <%= f.text_field :name, class: 'form_control' %>
+      <%= f.label :email %>
+      <%= f.text_field :email, class: 'form_control' %>
+      <%= f.label :password %>
+      <%= f.text_field :password, class: 'form_control' %>
+      <%= f.label :password_confirmation "Confirmation" %>
+      <%= f.text_field :password_confirmation, class: 'form_control' %>
+    <% end %>
+  </div>
+</div>
