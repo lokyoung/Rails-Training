@@ -29,6 +29,13 @@ gem 'faker', '1.4.2'
 gem 'will_paginate',  '3.0.7'
 gem 'bootstrap-will_paginate', '0.0.10'
 
+gem "therubyracer"
+gem "less-rails"
+
+# bootstrap主题
+gem 'twitter-bootswatch-rails'
+gem 'twitter-bootswatch-rails-helpers'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

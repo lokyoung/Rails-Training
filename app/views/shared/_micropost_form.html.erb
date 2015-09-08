@@ -1,0 +1,7 @@
+<%= form_for(@micropost) do |f| %>
+<%= render 'shared/error_message', object: f.object %>
+<div class="field">
+  <%= f.text_area :content, placeholder: "编写我的新微博" %>
+</div>
+<%= f.submit "提交", class: "btn btn-primary" %>
+<% end %>

@@ -4,10 +4,22 @@
 #   Ensure the SQLite 3 gem is defined in your Gemfile
 #   gem 'sqlite3'
 #
+
+# ActiveRecord::SchemaMigration Load (0.1ms)  SELECT "schema_migrations".* FROM "schema_migrations"
+# Processing by MicropostsController#create as HTML
+#   Parameters: {"utf8"=>"✓", "authenticity_token"=>"aZXklEssRDkPBY6jPAfW11jpdXHG95lW15W0TuRu/Bf2WOtKxB3cMovILshvRIICMP8oRIPgP+qcX909vAqYkg==", "micropost"=>{"content"=>"第一条微博"}, "commit"=>"提交"}
+#   User Load (0.2ms)  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 101]]
+#    (0.1ms)  begin transaction
+#   SQL (0.7ms)  INSERT INTO "microposts" ("content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["content", "第一条微博"], ["user_id", 101], ["created_at", "2015-09-08 08:18:18.631041"], ["updated_at", "2015-09-08 08:18:18.631041"]]
+#    (9951.4ms)  commit transaction
+# SQLite3::BusyException: database is locked: commit transaction
+#    (0.3ms)  rollback transaction
+# SQLite3::BusyException: database is locked: commit transaction
+# http://stackoverflow.com/questions/7154664/ruby-sqlite3busyexception-database-is-locked
 default: &default
   adapter: sqlite3
   pool: 5
-  timeout: 5000
+  timeout: 10000
 
 development:
   <<: *default

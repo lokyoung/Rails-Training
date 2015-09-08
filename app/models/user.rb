@@ -1,4 +1,6 @@
 class User < ActiveRecord::Base
+  # 如果删除改模型，依赖的也被删除
+  has_many :microposts, dependent: :destroy
   attr_accessor :remember_token
   before_save { self.email = email.downcase }
   validates :name, presence: true, length: { maximum: 50 }
@@ -28,5 +30,9 @@ class User < ActiveRecord::Base
 
   def authenticated?(remember_token)
     BCrypt::Password.new(remember_digest).is_password?(remember_token)
+  end
+
+  def feed
+    Micropost.where("user_id = ?", id)
   end
 end
