@@ -8,7 +8,7 @@ class User < ActiveRecord::Base
                     uniqueness: true
   # has_secure_password方法要求对应模型中有名为password_digest的属性
   has_secure_password
-  validates :password, length: { minimum: 6 }
+  validates :password, length: { minimum: 6 }, allow_blank: true
 
   def self.digest(string)
     cost = ActiveModel::SecurePassword.min_cost ? BCrypt::Engine::MIN_COST :

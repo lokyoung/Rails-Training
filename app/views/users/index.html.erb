@@ -1,0 +1,9 @@
+<% provide(:title, "所有用户") %>
+<h1>网站用户</h1>
+<%= will_paginate %>
+<ul>
+  <% @users.each do |user| %>
+  <%= render user %>
+  <% end %>
+</ul>
+<%= will_paginate %>

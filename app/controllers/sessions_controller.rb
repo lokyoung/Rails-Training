@@ -20,4 +20,5 @@ class SessionsController < ApplicationController
     # 在这里url和path我没有发现区别
     redirect_to root_url
   end
+
 end
