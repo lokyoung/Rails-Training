@@ -1,15 +1,15 @@
 <header class="navbar navbar-fixed-top navbar-inverse">
   <div class="container">
-    <%= link_to "社区", root_path, id: "logo" %>
+    <%= link_to "tutorial", root_path, id: "logo" %>
     <nav>
       <ul class="nav navbar-nav pull-right">
         <li><%= link_to "首页",  root_path %></li>
         <li><%= link_to "帮助",  help_path %></li>
         <% if logged_in? %>
-        <li><%= link_to "用户", users_path %></li>
+        <li><%= link_to "网站用户", users_path %></li>
         <li class="dropdown">
           <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-            用户
+            账户
             <b class="caret"></b>
           </a>
           <ul class="dropdown-menu">

@@ -10,7 +10,7 @@
   </aside>
   <div class="col-md-8">
     <% if @user.microposts.any? %>
-    <h1>微博(<%= @user.microposts.count %>)</h1>
+    <h1>发布信息(<%= @user.microposts.count %>)</h1>
     <ol class="micropost">
       <%= render @microposts %>
     </ol>

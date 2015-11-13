@@ -2,9 +2,9 @@
 <span class="user"><%= link_to micropost.user.name, micropost.user %></span>
 <span class="content"><%= micropost.content %></span>
 <span class="timestamp">
-  Posted
+  在
   <%= time_ago_in_words(micropost.created_at) %>
-  ago.
+  前发布。
   <% if current_user?(micropost.user) %>
     <%= link_to '删除', micropost, method: :delete,
                                   data: { confirm: "确认删除么？" } %>
